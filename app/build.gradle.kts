@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.whitelightning.jetskiandmore"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.whitelightning.jetskiandmore"
