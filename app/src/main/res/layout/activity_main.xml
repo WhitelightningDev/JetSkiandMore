@@ -1,16 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/swipeRefreshLayout"
+    android:id="@+id/rootLayout"
     tools:context=".MainActivity">
 
+    <!-- Your WebView goes here -->
     <WebView
         android:id="@+id/webView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <!-- Main Floating Action Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:backgroundTint="#6CA2FF"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/mainfab"
+        app:tint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        app:srcCompat="@drawable/add_2" />
+
+    <!-- Email Floating Action Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabEmail"
+        android:layout_width="wrap_content"
+        android:backgroundTint="#6CA2FF"
+        app:tint="@color/black"
+        android:contentDescription="@string/Email"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/fab"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        app:srcCompat="@drawable/mail" />
+
+    <!-- Call Floating Action Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tint="@color/black"
+        android:backgroundTint="#6CA2FF"
+        app:layout_constraintBottom_toTopOf="@+id/fabEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        app:srcCompat="@drawable/mobile"
+        android:contentDescription="@string/call_fab" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

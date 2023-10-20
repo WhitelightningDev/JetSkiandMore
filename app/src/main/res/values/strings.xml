@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Jet Ski and More</string>
+    <string name="floatingbutton">FloatingButton</string>
+    <string name="call_fab">Call\n</string>
+    <string name="Email">Email\n</string>
+    <string name="mainfab">Main Fab</string>
 </resources>
